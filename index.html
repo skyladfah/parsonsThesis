@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Sky Thesis</title>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.11/dist/gsap.min.js"></script>
+  <!-- ScrollMagic GSAP plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aleo:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- <div id="faux-gif"></div> -->
+
+<!-- header -->
+<div class="panel" data-color="white" style="text-align: center; padding-top: 3%;">
+        <div>
+            <h6 style="margin-bottom: 0;">Babies or Barkers</h6>
+            <h1 style="margin-top: 1%;">The growing popularity of dog ownership </br> in United States</h1>
+            <p class="description">Are pets becoming substitutes for children in modern society</br> as birth rates decline? </p>
+            <p class="description">By <b><u>Sky Ladfah</u></b></p>
+        </div> 
+        <!-- illustration -->
+        <div class="illustration-container" style="padding-left: 250px; padding-right: 250px; padding-top: 7%;">
+            <div style="text-align: right;">
+                <img src="illustration/GIF/Max_animated.gif" id="charlie" alt="charlie" style="width: 50%;">              
+                <div class="tooltiptext" id="charlieTooltip">
+                    <p>Hey there, I'm <b>Max!</b></br> I'm the most popular male dogs name </br>in the U.S. </p>
+                    <img src="illustration/charlie_line.png" alt="charlie_line" style="width: 30%; position: fixed;" >
+                </div> 
+            </div>
+
+            <div style="text-align: left;">
+                <img src="illustration/GIF/olivia_animated.gif" id="emma" alt="emma" style="width: 50%;">
+                <div class="tooltiptextLEFT" id="EmmaTooltip">
+                    <p>I'm <b>Olivia!</b></br> I'm the most popular baby girl name </br>in the U.S.</p>
+                    <img src="illustration/olivia_line.png" alt="olivia_line" style="width: 25%; padding-right: 40%;">
+                </div>    
+            </div>
+        </div>
+</div>
+
+<!-- scrollmagic starts here -->
+<!-- opening question-->
+<div id="trigger0"></div>
+<div id="pin0" class="panel" data-color="beige">
+    <div class="textpadding" style="padding-top: 22%; padding-bottom: 18%;" >
+        <h2>Did you know that currently, there are <span style="color:#0E8A40">more households with pets</span> than with children?</h2>
+</div>
+
+
+<!-- percentage bar -->
+<div class="content panel pinDiv" data-color="beige" style="padding-top: 8%;">
+    <div class="textpadding">
+        <h2>The number of babies being born hit an <span style="color:#0E8A40">all-time low</span></h2>
+        <p>The number of babies being born in the United States has been decreasing for over a decade. However,<b> the situation got much worse in 2020 because of the pandemic.</b> High costs of raising a child, financial struggles due to the recession, student loans, high living costs, and pandemic-related economic strain have caused many American to reconsider having children.</p>
+        <h3 style="padding-top: 3%;">Based on 3,866 U.S. adults ages 18 to 49;</h3>
+            <div class="static-rectangle"></div>
+            <div class="dog"></div>
+                <div class="percentage" style="text-align: center; float: left; margin-top: -5%;">
+                    <h3 style="color: #0E8A40; margin: 0%;"><span>0</span>% </h3>
+                    <p style="margin: 0%;">said they are <b style="color: #0E8A40;">very likely</b></br>to have children someday</p>
+                    <h3 style="margin: 3%;"><span class="year"></span></h3>
+                </div>
+    </div> 
+    <!-- source -->
+    <div class="textpadding" style="margin-top: 5%;">
+        
+        <p class="source" style="color: #595959;">This analysis is based on 3,866 U.S. adults ages 18 to 49, collected as a part of a larger survey conducted Oct. 18-24, 2021.</br>Source: <a href="https://www.pewresearch.org/short-reads/2021/11/19/growing-share-of-childless-adults-in-u-s-dont-expect-to-ever-have-children/" target="_blank">Pew Research Center</a>
+    </div>
+</div>
+
+<!-- financial concern -->
+<div id="trigger1"></div>
+<div id="pin1" class="panel" data-color="beige" style="padding-top: 5%;">
+    <div>
+        <div class="textpadding">
+            <h2>While <span style="color:#0E8A40">financial concerns</span> rank among the primary reasons why young Americans are having fewer babies or not having children at all, the U.S. <span style="color:#0E8A40">pet industry exceeded $100 billion</span> in sales. </h2>
+            <p>The U.S. pet industry is booming, with people <b>spending a lot more on their pets</b>, especially in 2020. 23 million American households acquired a pet during the pandemic. Bloomberg Intelligence’s Pet Economy Report finds that by 2028, the pet industry is projected to reach a staggering $195.6 billion.</p>
+        </div>
+        <!-- visual 2 --> 
+        <div style="text-align: center;">
+            <img src="illustration/pet_industry.png" alt="pet_industry" style="width: 55%; text-align: center;margin-top: 0%; margin-left: -13%;">
+        </div> 
+        <!-- source -->
+        <div class="textpadding">
+            <p class="source" style="color: #595959;">Source: <a href="https://www.americanpetproducts.org/press_industrytrends.asp" target="_blank">American Pet Products Association</a></br>Source: <a href="https://www.bloomberg.com/company/press/global-pet-industry-to-grow-to-500-billion-by-2030-bloomberg-intelligence-finds/" target="_blank">Bloomberg Finance</a></p> 
+        </div>
+    </div>
+</div>
+
+<!-- dogs are popular -->
+<div id="trigger2"></div>
+<div id="pin2" class="panel" data-color="beige" style="padding-top: 9%;">
+    <div class="textpadding">
+        <h2><span style="color:#0E8A40">Dogs</span> take the crown as <span style="color:#0E8A40">the most popular pet </span>in the nation. </h2>
+        <h3>Pets in the U.S. by Number of Households:</h3>
+    </div>
+
+        <!-- us pet --> 
+        <div class="us_pet_grid">
+            <div class="us_pet" style="text-align: center;">
+                <p><b>Dog</b></p>
+                <img src="illustration/us_pet/us_pet_dog.png" alt="pet_industry" style="width: 50%; text-align: center; padding-top: 8%; padding-bottom: 8%;">
+                <p><b>45%</b></p>
+                <p style="margin-top: -5%;">65.1M</br>households</p>
+            </div>
+            <div class="us_pet" style="text-align: center;">
+                <p><b>Cat</b></p>
+                <img src="illustration/us_pet/us_pet_cat.png" alt="pet_industry" style="width: 50%; text-align: center; padding-top: 8%; padding-bottom: 8%;">
+                <p><b>32%</b></p>
+                <p style="margin-top: -5%;">46.5M</br>households</p>
+            </div>
+            <div class="us_pet" style="text-align: center;">
+                <p><b>Freshwater</br>Fish</b></p>
+                <img src="illustration/us_pet/us_pet_fish.png" alt="pet_industry" style="width: 50%; text-align: center; margin: 0%;">
+                <p><b>8%</b></p>
+                <p style="margin-top: -5%;">11.1M</br>households</p>
+            </div>
+            <div class="us_pet" style="text-align: center;">
+                <p><b>Small</br>Animal¹</b></p>
+                <img src="illustration/us_pet/us_pet_small_animal.png" alt="pet_industry" style="width: 50%; text-align: center; margin: 0%;">
+                <p><b>5%</b></p>
+                <p style="margin-top: -5%;">6.7M</br>households</p>
+            </div>   
+            <div class="us_pet" style="text-align: center;">
+                <p><b>Bird</b></p>
+                <img src="illustration/us_pet/us_pet_bird.png" alt="pet_industry" style="width: 50%; text-align: center; padding-top: 8%; padding-bottom: 8%;">
+                <p><b>4%</b></p>
+                <p style="margin-top: -5%;">6.1M</br>households</p>
+            </div> 
+            <div class="us_pet" style="text-align: center;">
+                <p><b>Reptile</b></p>
+                <img src="illustration/us_pet/us_pet_reptile.png" alt="pet_industry" style="width: 50%; text-align: center; padding-top: 8%; padding-bottom: 8%;">
+                <p><b>4%</b></p>
+                <p style="margin-top: -5%;">6M</br>households</p>
+            </div> 
+            <div class="us_pet" style="text-align: center;">
+                <p><b>Horse &</br>Saltwater Fish</b></p>
+                <img src="illustration/us_pet/us_pet_horse.png" alt="pet_industry" style="width: 50%; text-align: center; margin: 0%;">
+                <p><b>2%</b></p>
+                <p style="margin-top: -5%;">4.4M</br>households</p>
+            </div> 
+        </div> 
+
+        <!-- source -->
+        <div class="textpadding" style="padding-top: 3%;">
+             <p class="source" style="color: #595959;">Source: <a href="https://www.forbes.com/advisor/pet-insurance/pet-ownership-statistics/" target="_blank">Forbes Advisor</a></br>1. The "small animal" category includes pets such as hamsters, gerbils, rabbits, guinea pigs, chinchillas, mice, rats, and ferrets.</p> 
+        </div>
+</div>
+
+<!-- Hook -->
+<div id="trigger3"></div>
+<div id="pin3" class="panel" data-color="beige" style="padding-top: 15%;">
+    <div class="textpadding" style="padding-bottom: 20%;" >
+        <h2>While some Americans may choose to have a dog instead of a baby due to financial considerations, <span style="color:#0E8A40">it is important to note that dog ownership still requires a significant financial commitment over the long-term.</span></h2>
+        <p>Therefore, adopting a dog should be carefully considered and well-planned decision. Let’s have a look at the financial commitments.</p>
+    </div>
+</div>
+
+
+<!-- cost comparision -->
+<div id="trigger4"></div>
+<div id="pin4" style="padding-left: 5%; padding-top: 2%; padding-bottom: 3%; background-color: white;">
+        <h2>The cost of raising Max and Olivia</h2>
+        <p>Here are the estimated costs of Max's and Olivia's expenses. </br>Click on each bubble to see the expenses in detail.</p>
+
+        <!-- main visualisation -->
+        <div class="grid-container">
+            <div style="padding: 0px;">
+                <img src="illustration/head_shot/charlie_headshot.png" alt="max_headshot" style="width: 70px;">
+                <h3 style="margin: 0px;">Max's expenses</h2>
+            </div>
+            <div style="padding: 0px;">
+                <img src="illustration/head_shot/olivia_headshot.png" alt="olivia_headshot" style="width: 65px;">
+                <h3 style="margin: 0px;">Olivia's expenses</h2>
+            </div>
+            <div style="padding-top: 0px;">
+                <svg width="350" height="350" id="max"></svg>
+                <p>Average Total: <b>$6,650</b></p>
+            </div>  
+            <div style="padding-top: 0px;">
+                <svg width="600" height="600" id="olivia"></svg> 
+                <p>Average Total: <b>$25,163</b></p> 
+            </div>
+        </div>
+</div>
+    
+<!-- Drive in -->
+
+<div class="panel" data-color="black">
+<div id="trigger5"></div>
+<div class="half-half">
+    <div class="left" id="pin5" style="margin-top: 30%; margin-bottom: 80%;">
+        <div class="before" id ="before-reveal">
+            <img src="illustration/before.png" alt="outline" style="width: 60%; height:60%; padding-top: 5%; padding-left: 20%;">
+        </div>
+        <div class="after" id ="after-reveal">
+            <img src="illustration/after.png" alt="outline" style="width: 60%; height:60%; padding-top: 5%; padding-left: 20%;">
+        </div>
+    </div>
+
+    <div class="half">
+            <div id="trigger6"></div>
+                <div id="pin6">
+                    <h2 style="padding-top: 80%; color: white;"><span style="color:#0E8A40">45% of dog owners</span> thought they were financially ready for dog expenses — <span style="color:#0E8A40">but were not.</span></h2>
+                </div>
+        <!-- showing the after image after pin7  -->
+            <div id="trigger7"></div>
+                <div id="pin7">
+                    <h2 style="padding-top: 80%; color: white;">Expenses for dogs <span style="color:#0E8A40">will increase</span> as they get older.</h2>
+                    <p style="color: white;">Particularly, in the area of medical care, food and pet insurance.</p>
+                </div>
+    </div>
+</div>
+</div>
+
+<!-- Lifetime cost -->
+<div id="trigger8" class="panel" data-color="beige"></div>
+<div id="pin8" data-color="beige" style="padding-top: 10%; padding-bottom: 20%;">
+    <div class="textpadding">
+        <h2><span style="color:#0E8A40">The lifetime cost</span> of Max is still a lot cheaper than raising Olivia until she reaches the age of 17.</h2>
+    </div> 
+
+<div class="us_pet_grid">
+    <div class="us_pet" style="text-align: center;">
+        <img src="illustration/GIF/dog_sleeping_animated.gif" alt="sleeping_dog" style="width: 70%; text-align: center; padding-top: 3%; padding-bottom: 0%;">
+        <p><b>$19,893</b></br>to</br><b>$55,132</b></p>
+    </div>
+    <div class="us_pet" style="text-align: center;">
+        <img src="illustration/GIF/dog_sleeping_animated.gif" alt="sleeping_dog" style="width: 70%; text-align: center; padding-top: 3%; padding-bottom: 0%;">
+        <p><b>$174,690</b></br>to</br><b>$372,210</b></p>
+    </div>
+</div>
+</div>
+
+
+<!-- Conclusion -->
+<div>
+    <div class="textpadding">
+        <h2><span style="color:#0E8A40">Dogs have become a popular alternative to parenthood,</span> offering companionship, loyalty, and unconditional love.</h2>
+        <h2>It's important to keep in mind that while the cost of owning a dog may be lower than that of raising a child, <span style="color:#0E8A40">expenses will increase as the dog grows older.</span></h2>
+    
+    </div>
+    <div class="image-container" style="padding-top: 10%;">
+        <div style="text-align: left; position: absolute;">
+            <img src="illustration/GIF/mother_and_baby_animated.gif" alt="sleeping_dog" style="width: 45%; text-align: center; margin-bottom: 8%;">
+        </div>
+        <div style="text-align: right; position: absolute;">
+            <img src="illustration/GIF/me_and_mommam_animated.gif" alt="sleeping_dog" style="width: 40%; text-align: center; margin-bottom: 3%;">
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="script.js"></script>
+<script src="cost.js"></script>
+</body>
+</html>
