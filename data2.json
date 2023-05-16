@@ -1,0 +1,82 @@
+{
+    "name": "Olivia", 
+    "children": 
+    [
+    {
+        "name": "Pregnancy & delivery (with insurance)",
+        "size": 5790,
+        "children": [
+          { "name": "Ultrasound", "size": 240 },
+          { "name": "Out-of-pocket delivery cost" , "size": 1905 },
+          { "name": "Postpartum spending", "size": 3645 }
+        ]
+    },
+    { 
+        "name": "Initial Cost", 
+        "size": 3683,
+        "children": [
+            { "name": "Gear" , "size": 878 },
+            { "name": "Nursery" , "size": 1387 },
+            { "name": "Feeding", "size": 436 },
+            { "name": "Breastfeeding", "size": 382 },
+            { "name": "Bathing & grooming", "size": 190 },
+            { "name": "Health & safety", "size": 126 }
+        ]
+    },
+    { 
+        "name": "Housing", 
+        "size": 4887,
+        "children": [
+            { "name": "Shelter","size": 1629 },
+            { "name": "Utilities","size": 1629 },
+            { "name": "House furnishings and equipment","size": 1629}
+        ]
+    },
+    { "name": "Food","size": 1740},
+    { 
+        "name": "Transportation", 
+        "size": 1857,
+        "children": [
+            { "name": "Vehicle loans","size": 464.25  },
+            { "name": "Down payments" ,"size": 464.25 },
+            { "name": "Gasoline and motor oil","size": 464.25  },
+            { "name": "Maintenance and repairs" ,"size": 464.25 }
+        ]
+    },
+    { 
+        "name": "Clothing", 
+        "size": 1140,
+        "children": [
+            { "name": "Children’s Apparel","size": 855 },
+            { "name": "Clothing Services" ,"size": 285}
+        ]
+    },
+    { 
+        "name": "Health care (not covered by insurance)", 
+        "size": 1073,
+        "children": [
+            { "name": "Medical and dental services" ,"size": 268.25},
+            { "name": "Prescription drugs and medical supplies" ,"size": 268.25},
+            { "name": "Health insurance","size": 268.25 },
+            { "name": "Physical and mental health medical services","size": 268.25}
+        ]
+    },
+    { 
+        "name": "Child care and education", 
+        "size": 3983,
+        "children": [
+            { "name": "Day care tuition and supplies","size": 1991.5 },
+            { "name": "Babysitting","size": 1991.5 }
+        ]
+    },
+    { 
+        "name": "Miscellaneousb", 
+        "size": 1010,
+        "children": [
+            { "name": "Personal Care Items","size": 336 },
+            { "name": "Entertainment","size": 336 },
+            { "name": "Reading Materials" ,"size": 336}
+        ]
+    }
+    ]
+}

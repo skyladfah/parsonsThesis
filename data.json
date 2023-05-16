@@ -1,0 +1,67 @@
+
+{
+        "name": "Max", 
+        "children": [
+          {
+            "name": "First-Time Dog Expenses",
+            "size": 3145,
+            "children": [
+              { "name": "Adoption", "size": 420 },
+              { 
+                "name": "Veterinary",
+                "size": 1640, 
+                "children": [
+                  { "name": "Basic veterinary care", "size": 920 },
+                  { "name": "Exam & vaccinations", "size": 70 },
+                  { "name": "Spay & neuter", "size": 425 },
+                  { "name": "Microchip", "size": 225 }
+                ]
+              },
+              { 
+                "name": "Essential Supplies", 
+                "size": 747.5, 
+                "children": [
+                  { "name": "Collar & harness", "size": 60 },
+                  { "name": "Leash", "size": 32.5 },
+                  { "name": "Bowls", "size": 40 },
+                  { "name": "Poop bags", "size": 27.5 },
+                  { "name": "Crate", "size": 215 },
+                  { "name": "Bed", "size": 282.5 },
+                  { "name": "Shampoo & brush", "size": 27.5 },
+                  { "name": "Odor removers", "size": 12.5 },
+                  { "name": "Potty pads", "size": 50 }
+                ]             
+              },
+              { "name": "Toys", "size": 42.5 },
+              { "name": "Treats", "size": 60 },
+              { "name": "Pet license", "size": 60 },
+              { "name": "Food", "size": 175 }
+            ]
+          },
+          { "name": "Food", "size": 1320 },
+          { "name": "Treats", "size": 270 },
+          { "name": "Toys", "size": 140 },
+          { 
+            "name": "Medical Expenses", 
+            "size": 892.5,
+            "children": [
+              { "name": "Flea and tick prevention", "size": 135 },
+              { "name": "Poop bags", "size": 127.5 },
+              { "name": "Annual check up", "size": 90 },
+              { "name": "Pet insurance", "size": 540 }
+            ]
+          },
+          { 
+            "name": "Optional expenses",
+            "size": 792.5,
+            "children": [
+              { "name": "Dog boarding", "size": 180 },
+              { "name": "Dog walking", "size": 80 },
+              { "name": "Grooming", "size": 87.5 },
+              { "name": "Apartment pet deposit", "size": 350 },
+              { "name": "Training session", "size": 95 }
+            ]
+          }
+        ]
+}
+  
