@@ -63,12 +63,12 @@ const scene = new ScrollMagic.Scene({
 })
   .setPin(".pinDiv")
   .setTween(tween)
-  .addIndicators({
-    colorTrigger: "white",
-    colorStart: "white",
-    colorEnd: "white",
-    name: ":The Dog"
-  })
+  // .addIndicators({
+  //   colorTrigger: "white",
+  //   colorStart: "white",
+  //   colorEnd: "white",
+  //   name: ":The Dog"
+  // })
   .addTo(controller);
 
 function updatePercentage() {
@@ -102,7 +102,7 @@ $(function () {
     duration: "25%"
   })
   .setPin("#pin0")
-  .addIndicators({name: "1 (duration: 300)"})
+  // .addIndicators({name: "1 (duration: 300)"})
   .addTo(controller2);
 
   // pin financial concern
@@ -112,7 +112,7 @@ $(function () {
     duration: "50%"
   })
   .setPin("#pin1")
-  .addIndicators({name: "1 (duration: 300)"})
+  // .addIndicators({name: "1 (duration: 300)"})
   .addTo(controller2);
 
 // pin dogs are popular
@@ -122,7 +122,7 @@ $(function () {
     duration: "50%"
   })
   .setPin("#pin2")
-  .addIndicators({name: "1 (duration: 300)"})
+  // .addIndicators({name: "1 (duration: 300)"})
   .addTo(controller2);
 
 // pin hook
@@ -132,7 +132,7 @@ $(function () {
     duration: "50%"
 })
   .setPin("#pin3")
-  .addIndicators({name: "1 (duration: 300)"})
+  // .addIndicators({name: "1 (duration: 300)"})
   .addTo(controller2);
 
 // pin cost comparision
@@ -142,51 +142,20 @@ $(function () {
     duration: "75%"
 })
   .setPin("#pin4")
-  .addIndicators({name: "1 (duration: 300)"})
+  // .addIndicators({name: "1 (duration: 300)"})
   .addTo(controller2);
 
-  // pin svg
+// pin svg
   var scene = new ScrollMagic.Scene({
     triggerElement: "#trigger5", 
     triggerHook: "onLeave",
-    duration: "200%"
+    duration: "100%"
 })
   .setPin("#pin5")
-  .addIndicators({name: "1 (duration: 300)"})
+  // .addIndicators({name: "1 (duration: 300)"})
   .addTo(controller2);
 
-  // in 45%
-  var scene = new ScrollMagic.Scene({
-    triggerElement: "#trigger6", 
-    triggerHook: "onLeave",
-    duration: "20%"
-})
-  .setPin("#pin6")
-  .addIndicators({name: "pin6"})
-  .addTo(controller2);
-
-  
-  // Expenses will increase
-  //   var scene = new ScrollMagic.Scene({
-  //     triggerElement: "#trigger7", 
-  //     triggerHook: "onLeave",
-  //     duration: "20%"
-  // })
-  //   .setPin("#pin7")
-  //   .addIndicators({name: "pin7"})
-  //   .addTo(controller2);
-
-// lifetime cost
-  var scene = new ScrollMagic.Scene({
-    triggerElement: "#trigger8", 
-    triggerHook: "onLeave",
-    duration: "50%"
-})
-  .setPin("#pin8")
-  .addIndicators({name: "pin8"})
-  .addTo(controller2);
-
-//pin 5 showing the before image
+//pin the before image
 new ScrollMagic.Scene({
   triggerElement: "#pin5",
   triggerHook: 0.9,
@@ -196,27 +165,65 @@ new ScrollMagic.Scene({
 .setClassToggle("#before-reveal","visible")
 .addTo(controller2)
 
-//pin 6 toggle the before image to invisible
+// pin 45%
+var scene = new ScrollMagic.Scene({
+  triggerElement: "#trigger6", 
+  triggerHook: "onLeave",
+  duration: "20%"
+})
+.setPin("#pin6")
+// .addIndicators({name: "pin6"})
+.addTo(controller2);
+
+// Create a new TweenMax instance
+var tween = TweenMax.fromTo("#before-reveal", 1, {opacity: 1}, {opacity: 0});
+
+// Create a new ScrollMagic scene
 new ScrollMagic.Scene({
   triggerElement: "#pin6",
-  triggerHook: 0.9,
-  duration:"80%",
-  offset:400,
+  triggerHook: 0.05,
+  duration: "80%",
+  offset: 100,
 })
-.setClassToggle("#before-reveal")
-.addTo(controller2)
+.setTween(tween) // Set the tween as the scene's animation
+.addTo(controller2);
 
-//pin 7 showing the after image
-  new ScrollMagic.Scene({
-    triggerElement: "#pin7",
-    triggerHook: 0.9,
-    duration:"90%",
-    offset:400,
-  })
-  .setClassToggle("#after-reveal","visible")
-  .addTo(controller2)
-  
+// pin 45%
+var scene = new ScrollMagic.Scene({
+  triggerElement: "#trigger7", 
+  triggerHook: "onLeave",
+  duration: "20%"
+})
+.setPin("#pin7")
+// .addIndicators({name: "pin7"})
+.addTo(controller2);
+
+  // Create a new TweenMax instance
+var tween = TweenMax.fromTo("#after-reveal", 1, {opacity: 0}, {opacity: 1});
+
+// Create a new ScrollMagic scene
+new ScrollMagic.Scene({
+  triggerElement: "#pin7",
+  triggerHook: 0.9,
+  duration: "90%",
+  offset: 00,
+})
+.setTween(tween) // Set the tween as the scene's animation
+.addTo(controller2);
+
+
+// lifetime cost
+var scene = new ScrollMagic.Scene({
+  triggerElement: "#trigger8", 
+  triggerHook: "onLeave",
+  duration: "50%"
+})
+.setPin("#pin8")
+// .addIndicators({name: "pin8"})
+.addTo(controller2);
 });
+
+
 
 
 
